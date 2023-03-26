@@ -1,12 +1,45 @@
 <script>
   import { providers } from './providers';
+
+  let visibleProviders = providers;
+
+  const serviceTypes = providers.map(p => {
+    return Array.from(new Set(p.services));
+  }).flat();
+
+  let selectedType = 'All Services';
+
+  const filterProviders = () => {
+    return providers.filter(p => {
+      return p.services.indexOf(selectedType) > -1;
+    });
+  }
+
+  $: visibleProviders = selectedType === 'All Services'
+    ? providers
+    : filterProviders();
+
+
 </script>
 
 <div class="container">
-  {#each providers as provider}
+  <div class="container">
+    <select bind:value={ selectedType } class="service-filter">
+      <option value="All Services">All Services</option>
+      {#each serviceTypes as service}
+        <option value="{ service }">{ service }</option>
+      {/each}
+    </select>
+  </div>
+  {#each visibleProviders as provider}
     <div class="top"></div>
     <div class="row">
-      <h2>{ provider.name }</h2>
+      <div class="row heading">
+        <h2 class="provider-name">{ provider.name }</h2>
+        {#if provider.website } 
+          <a target="_blank" class="website-btn" href="{ provider.website }">Website</a>
+        {/if}
+      </div>
       <div class="contents">
         <div class="services">
           <ul class="service-list">
@@ -55,6 +88,35 @@
   .container {
     width: 100%;
     line-height: 2;
+    margin: 0 auto;
+  }
+
+  .service-filter {
+    margin: 0 auto;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .provider-name {
+    flex: 11;
+  }
+  .website-btn {
+    font-weight: bold;
+    flex: 1;
+    height: 2em;
+    border-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    background-color: blue;
+    border: .5px solid black;
+    text-decoration: none;
+    color: white;
   }
 
   .location {
@@ -74,10 +136,6 @@
   .top {
     width: 100%;
     border-bottom: 1px solid black;
-  }
-
-  .row {
-    width: 100%;
   }
 
   .contents {

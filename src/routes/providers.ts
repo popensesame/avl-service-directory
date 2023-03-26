@@ -99,7 +99,7 @@ export const providers: Provider[] = [
     description: 'Trans Lifeline is a grassroots hotline and microgrants 501(c)(3) non-profit organization offering direct emotional and financial support to trans people in crisis – for the trans community, by the trans community.',
     website: 'https://translifeline.org',
     services: [
-      'Support Hotine',
+      'Support Hotline',
       'Transgender & Non-binary Support',
       'LGBTQ Support'
     ],
@@ -163,6 +163,63 @@ export const providers: Provider[] = [
           '828-254-2968'
         ],
         address: '35 Woodfin St, Asheville, NC 28801'
+      }
+    ]
+  },
+  {
+    name: 'Pisgah Legal Services',
+    description: 'Pisgah Legal Services seeks to pursue justice by providing legal assistance and advocacy to help low-income people in Western North Carolina meet their basic needs and improve their lives.',
+    website: 'https://www.pisgahlegal.org',
+    services: [
+      'Legal Aid'
+    ],
+    locations: [
+      {
+        name: 'Apply for Help',
+        phones: [
+          '828-253-0406'
+        ],
+        hours: [
+          'Monday - Friday 8:30am - 5:00pm'
+        ]
+      },
+      {
+        name: 'Asheville Office',
+        phones: [
+          '1-828-253-040'
+        ],
+        address: '62 Charlotte Street, Asheville, NC 28801'
+      },
+      {
+        name: 'Hendersonville Office',
+        phones: [
+          '1-828-692-7622'
+        ],
+        address: '440 S. Church Street, Hendersonville, NC 28792',
+      },
+      {
+        name: 'Rutherfordton Office',
+        phones: [
+          '1-828-247-0297'
+        ],
+        address: '169 N. Main Street, Rutherfordton, NC 28139'
+      },
+      {
+        name: 'Highlands/Cashiers Office',
+        phones: [
+          '828-210-3424'
+        ],
+        address: '209 Hospital Dr. Ste. 203, Highlands, NC 28741'
+      },
+      {
+        name: 'Burnsville Office',
+        phones: [
+          '1-800-489-6144'
+        ],
+        address: '302 W. U.S. Hwy. 19E Bypass, Burnsville, NC 28714'
+      },
+      {
+        name: 'Additional offices on website'
       }
     ]
   }
