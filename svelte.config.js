@@ -21,10 +21,7 @@ const config = {
       fallback: null,
       precompress: false,
       strict: true
-		}),
-    paths: {
-      base: dev ? '' : '/avl-service-directory'
-    }
+		})
 	}
 };
 
