@@ -7,7 +7,7 @@ publish(
   repo: 'https://github.com/popensesame/avl-service-directory.git',
   user: {
    name: 'Matthew Geiger',
-   email: 'mattpgeiger@pm.me'
+   email: 'popensesame@pm.me'
   },
   dotfiles: true
   },
