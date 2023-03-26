@@ -23,7 +23,7 @@ const config = {
       strict: true
 		}),
     paths: {
-      base: dev ? '' : '/avl-service-directory',
+      base: dev ? '' : '/avl-service-directory'
     }
 	}
 };
