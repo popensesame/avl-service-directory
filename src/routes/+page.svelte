@@ -1,31 +1,23 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import ProviderList from './ProviderList.svelte'
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Asheville Service Directory" />
 </svelte:head>
 
 <section>
 	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
+		Asheville Service Directory
 	</h1>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+	<p class="wip-warning">
+		WARNING: This project is a work in progress!
+	</p>
 
-	<Counter />
+	<ProviderList />
+
 </section>
 
 <style>
@@ -37,23 +29,14 @@
 		flex: 0.6;
 	}
 
+	.wip-warning {
+		background-color: orange;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
 	h1 {
 		width: 100%;
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
